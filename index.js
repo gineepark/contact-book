@@ -9,7 +9,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-var db = mongoose.connection;
+mongoose.connect(MONGO_DB); 
 db.once('open', function(){
   console.log('DB connected');
 });
